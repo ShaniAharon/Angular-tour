@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from 'src/app/models/hero';
 import { HeroService } from 'src/app/services/hero.service';
-import { MessageService } from 'src/app/services/message.service';
 
 //@Component is a decorator function that specifies the Angular metadata for the component.
 @Component({
