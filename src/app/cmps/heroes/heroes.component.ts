@@ -6,23 +6,24 @@ import { Hero } from 'src/app/models/hero';
 @Component({
   selector: 'app-heroes', //The component's CSS element selector.
   templateUrl: './heroes.component.html', //The location of the component's template file.
-  styleUrls: ['./heroes.component.scss'] //The location of the component's private CSS styles.
+  styleUrls: ['./heroes.component.scss'], //The location of the component's private CSS styles.
 })
 export class HeroesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  hero:Hero = {
+  selectedHero?: Hero = {
     id: 1,
-    name:'Windstorm'
-  }
+    name: 'Windstorm',
+  };
 
-  heroes = HEROES
+  heroes = HEROES;
 
   //The ngOnInit() is a lifecycle hook.
   // Angular calls ngOnInit() shortly after creating a component.
   // It's a good place to put initialization logic.
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
